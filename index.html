@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Cadastro de equipes</h2>
+    <div>
+        <label for="nome">Nome do time</label>
+        <input id="nomeDaEquipe" type="text">
+        <label for="jogadores">Jogadores</label>
+        <input id="quantidade" type="number">
+    </div>
+    <button id="botaoCadastrar" onclick="criarEquipe()">Cadastrar</button>
+    <button id="botaoEditar" class="hidden" onclick="atualizarEquipes(id)">Editar</button>
+    <div id="listarEquipes"></div>
+
+    <div id="listarEquipesUnica"></div>
+
+    <script src="assets/js/index.js"></script>
+</body>
+</html>
