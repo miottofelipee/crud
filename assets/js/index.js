@@ -56,8 +56,8 @@ class EquipeService {
         return equipe;
     }
 
-    deletarEquipe(parametro){
-        return(this.equipes = this.equipes.filter(
+    deletarEquipe(parametro) {
+        return (this.equipes = this.equipes.filter(
             (equipe) => equipe.id != parametro
         ))
     }
@@ -89,8 +89,8 @@ function listarEquipesPorId(id) {
 
     const elementoLista = document.getElementById("listarEquipesUnica");
     elementoLista.innerHTML = '';
-
-    let content = `
+    let content = "";
+    content = `
         <div>
         <p> Id: ${equipe.id}</p>
         <p> Nome: ${equipe.nome}</p>
@@ -114,6 +114,7 @@ function atualizarEquipes(id) {
 
     document.getElementById("botaoCadastrar").classList.add("hidden");
     document.getElementById("botaoEditar").classList.remove("hidden");
+    aux = id;
 }
 
 function editarEquipe() {
@@ -136,7 +137,7 @@ function limparinputs() {
     document.getElementById("quantidade").value = '';
 }
 
-function deletarEquipe(id){
+function deletarEquipe(id) {
     equipeService.deletarEquipe(id);
     listarEquipes();
     document.getElementById('listarEquipesUnica').classList.add('hidden');
